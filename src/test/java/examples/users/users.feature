@@ -40,8 +40,8 @@ Feature: sample karate test script
     * def id = response.id
     * print 'created id is: ', id
 
-    Given path id
-    # When method get
-    # Then status 200
-    # And match response contains user
+    #Given path id
+    #When method get
+    #Then status 200
+    #And match response contains user
   
