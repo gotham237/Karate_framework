@@ -1,4 +1,4 @@
-package examples.users;
+package features.users;
 
 import com.intuit.karate.junit5.Karate;
 

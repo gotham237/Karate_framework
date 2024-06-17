@@ -1,4 +1,4 @@
-package examples;
+package features;
 
 import com.intuit.karate.junit5.Karate;
 
