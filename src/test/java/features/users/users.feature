@@ -4,6 +4,7 @@ Feature: sample karate test script
   Background:
     * url 'https://jsonplaceholder.typicode.com'
     * configure report = { showLog: true, showAllSteps: false }
+    * call read('classpath:features/hooks/Hooks.feature@commonConfigAndDefinitions')
 
   Scenario: get all users and then get the first user by id
     Given path 'users'
@@ -22,7 +23,6 @@ Feature: sample karate test script
       {
         "name": "Test User",
         "username": "testuser",
-        "email": "test@user.com",
         "address": {
           "street": "Has No Name",
           "suite": "Apt. 123",
@@ -31,6 +31,7 @@ Feature: sample karate test script
         }
       }
       """
+    * set user.email = RandomDataGenerator.getRandomEmail();
 
     Given url 'https://jsonplaceholder.typicode.com/users'
     And request user
